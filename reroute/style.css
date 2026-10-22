@@ -120,6 +120,8 @@ th { color: var(--muted); font-weight: 700; }
 footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 26px; justify-content: space-between; }
 footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+/* The non-affiliation note: a line of its own above the footer row. */
+footer .wrap > p.small { flex-basis: 100%; margin: 0; }
 footer a { color: var(--muted); }
 
 @media (max-width: 560px) {
