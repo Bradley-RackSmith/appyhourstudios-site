@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ReRoute Racing: Race Any Road</title>
+  <meta name="description" content="A racing game for iPhone that turns real roads into tracks: famous racetracks, city circuits past their landmarks, mountain hill climbs, and the streets outside your door.">
+  <meta property="og:title" content="ReRoute Racing: Race Any Road">
+  <meta property="og:description" content="Real racetracks, city circuits, hill climbs, and the streets outside your door. No ads, nothing that buys speed.">
+  <meta property="og:image" content="assets/icon.png">
+  <link rel="icon" href="assets/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./"><img src="assets/icon.png" alt="">ReRoute Racing</a>
+      <nav class="nav">
+        <a href="#tracks">Tracks</a>
+        <a href="#garage" class="hide-sm">Garage</a>
+        <a href="#faq">FAQ</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div class="wrap">
+      <img class="icon" src="assets/icon.png" alt="ReRoute Racing app icon">
+      <h1>Race <em>any</em> road.</h1>
+      <p class="lede">Real racetracks, city circuits past their landmarks, mountain climbs above the clouds, and the streets outside your door, all turned into tracks for iPhone.</p>
+      <!-- Swap for the official "Download on the App Store" badge and link at launch. -->
+      <span class="badge soon">Coming soon to the App Store</span>
+      <p class="small">Free to start. No ads. Nothing that buys speed.</p>
+
+      <!-- Screenshots: 2868 × 1320 captures from the phone go in assets/ (shot-1.png ...). -->
+      <div class="shots">
+        <div class="shot"><span>Down the Corkscrew at Laguna Seca</span></div>
+        <div class="shot"><span>Times Square, screens and all</span></div>
+        <div class="shot"><span>Above the clouds on Pikes Peak</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="checker"></div>
+
+  <section>
+    <div class="wrap">
+      <h2>Every road is a track</h2>
+      <p>Pick a famous circuit, or make your own from the real map. The game builds the road, its hills, the buildings beside it, and the corners ahead.</p>
+      <div class="grid">
+        <div class="card"><div class="kicker">Famous Circuits</div><h3>21 tracks, ready to race</h3><p>Real racetracks with their grandstands, gravel traps, tyre walls and named corners. Three legendary hill climbs. Ten cities past their landmarks. They ship with the game and work offline.</p></div>
+        <div class="card"><div class="kicker">Your roads</div><h3>Draw a course</h3><p>Tap roads or starred places on a map, or search for one, and the game follows the real roads between them: from place to place, or in laps. Or get a random circuit on nearby streets.</p></div>
+        <div class="card"><div class="kicker">Beat the clock</div><h3>Trophies and ghosts</h3><p>Bronze to platinum on every track, set by an expert run. Race your own best lap as a ghost car, and a new Daily Track every day.</p></div>
+        <div class="card"><div class="kicker">Made for the phone</div><h3>Forgiving, fast, fair</h3><p>Walls slow you down but never end a run. Turn cards show every bend ahead. Steering assist on sharp corners, and full game controller support.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="tracks">
+    <div class="wrap">
+      <h2>The track library</h2>
+      <p>Built from OpenStreetMap, with real elevation: the Corkscrew drops, the Eifel climbs, and the hill climbs rise past the treeline.</p>
+      <div class="tracks">
+        <div>
+          <h3>Racetracks</h3>
+          <ul>
+            <li>The Eifel loop <span>Germany · 20.8 km</span></li>
+            <li>The Eifel GP circuit <span>Germany</span></li>
+            <li>Monterey's Corkscrew circuit <span>California</span></li>
+            <li>The Ardennes circuit <span>Belgium</span></li>
+            <li>Northamptonshire's airfield circuit <span>England</span></li>
+            <li>The royal park circuit <span>Monza, Italy</span></li>
+            <li>The Austin circuit <span>Texas</span></li>
+            <li>Mount Panorama <span>Bathurst, Australia</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Hill climbs</h3>
+          <ul>
+            <li>Mount Washington <span>New Hampshire · 1,400 m up</span></li>
+            <li>Pikes Peak <span>Colorado · to 4,300 m</span></li>
+            <li>Mont Ventoux <span>Provence · 1,600 m up</span></li>
+          </ul>
+          <h3 style="margin-top:22px">City circuits</h3>
+          <ul>
+            <li>Paris <span>Champs-Élysées to the Eiffel Tower</span></li>
+            <li>London <span>Westminster and Big Ben</span></li>
+            <li>New York <span>Midtown and Times Square</span></li>
+            <li>Las Vegas <span>The Strip</span></li>
+            <li>San Francisco <span>Embarcadero and Nob Hill</span></li>
+            <li>Chicago <span>The Magnificent Mile</span></li>
+            <li>Berlin <span>The Tiergarten</span></li>
+            <li>Dubai <span>Downtown</span></li>
+            <li>Los Angeles <span>Hollywood</span></li>
+            <li>Washington, D.C. <span>The National Mall</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Track names: final names depend on the trademark check in LAUNCH_CHECKLIST.md (section 6). -->
+    </div>
+  </section>
+
+  <section id="garage">
+    <div class="wrap">
+      <h2>Build your Garage</h2>
+      <p>Four cars, earned by racing. Upgrades come from credits you win on the track, never from a store.</p>
+      <div class="grid">
+        <div class="card"><div class="kicker">Cars</div><h3>Street to GT</h3><p>A nimble street car, a hot hatch, a muscle car and a GT, each with its own engine sound.</p></div>
+        <div class="card"><div class="kicker">Upgrades</div><h3>Engine, brakes, tires</h3><p>Spend the credits you earn, and tune each car from grippy to drifty.</p></div>
+        <div class="card"><div class="kicker">Looks</div><h3>Earn your style</h3><p>Wheels, custom paint, spoilers, wide body kits and the gold Legend look, unlocked as you level up.</p></div>
+        <div class="card"><div class="kicker">Sound</div><h3>Your radio</h3><p>Built-in stations, or your own Apple Music playlists on the car radio.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Free to start. One purchase for everything.</h2>
+      <p>No ads, no coins, no energy, no timers.</p>
+      <div class="split">
+        <div class="tier">
+          <h3>Free</h3>
+          <div class="price">$0</div>
+          <ul>
+            <li>Every game mode</li>
+            <li>Four Famous Circuits: Laguna Seca, Paris, London and New York</li>
+            <li>The Daily Track</li>
+            <li>Two cars, with every car earnable by level</li>
+            <li>Three saved courses and two map areas to build your own</li>
+          </ul>
+        </div>
+        <div class="tier paid">
+          <h3>Full Garage</h3>
+          <div class="price">One-time purchase · Family Sharing</div>
+          <ul>
+            <li>The whole track library</li>
+            <li>Every car, right away</li>
+            <li>Unlimited saved courses and map areas</li>
+            <li>More laps, and every paint and body kit</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+      <details><summary>Which iPhones does it run on?</summary><p>Any iPhone with iOS 18 or later. It's built to hold 60 frames a second on an iPhone 12 or newer.</p></details>
+      <details><summary>Does it work offline?</summary><p>Yes, for the Famous Circuits, the Daily Track, your saved courses and the map areas you've downloaded. Building a new course or road needs a connection, once.</p></details>
+      <details><summary>Can I use a game controller?</summary><p>Yes. Xbox, PlayStation, Nintendo Switch Pro and MFi controllers such as Backbone and Razer Kishi all work, in races and in the menus.</p></details>
+      <details><summary>Where does the map come from?</summary><p>OpenStreetMap, the free map of the world made by volunteers. Land heights come from open elevation data, so hills are real.</p></details>
+      <details><summary>What does the game know about me?</summary><p>Nothing. There's no account, no ads and no tracking. Your progress is kept on your phone and in your own iCloud. See the <a href="privacy.html">privacy policy</a>.</p></details>
+      <details><summary>I bought the Full Garage. How do I get it on a new phone?</summary><p>Open Settings in the game and tap Restore Purchases. Family members get it too, through Family Sharing.</p></details>
+    </div>
+  </section>
+
+  <div class="checker"></div>
+  <footer>
+    <div class="wrap">
+      <div>© 2026 Bradley Wynhof · <a href="../">Appy Hour Studios</a> · Map data © OpenStreetMap contributors</div>
+      <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="press.html">Press</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
