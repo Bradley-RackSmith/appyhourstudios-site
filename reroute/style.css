@@ -68,6 +68,7 @@ img { max-width: 100%; display: block; }
   background: var(--red); color: #fff; text-decoration: none; font-weight: 800;
 }
 .badge:hover { background: var(--red-dark); color: #fff; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .badge.soon { background: var(--asphalt-3); color: var(--muted); border: 1px solid var(--line); cursor: default; }
 .small { font-size: 14px; color: var(--muted); }
 
