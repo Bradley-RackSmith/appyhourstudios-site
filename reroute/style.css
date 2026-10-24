@@ -50,8 +50,13 @@ img { max-width: 100%; display: block; }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; }
 .nav a:hover { color: var(--text); }
 
-/* Hero */
-.hero { padding: 64px 0 40px; text-align: center; background: radial-gradient(ellipse at top, #2a1a18 0%, var(--asphalt) 60%); }
+/* Hero: the header loop plays behind the title, darkened so the words read. */
+.hero { position: relative; overflow: hidden; padding: 64px 0 56px; text-align: center; background: var(--asphalt); }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(rgba(20, 22, 27, 0.55), rgba(20, 22, 27, 0.7) 60%, var(--asphalt)); }
+.hero .wrap { position: relative; z-index: 2; }
+.hero h1, .hero p.lede { text-shadow: 0 2px 16px rgba(0, 0, 0, 0.6); }
+.hero p.lede { color: #dfe2e8; }
 .hero .icon { width: 120px; height: 120px; border-radius: 27px; margin: 0 auto 22px; box-shadow: 0 12px 40px rgba(229, 67, 45, 0.35); }
 .hero h1 { font-size: clamp(38px, 7vw, 64px); line-height: 1.05; margin: 0 0 10px; font-weight: 900; letter-spacing: -1px; }
 .hero h1 em { font-style: normal; color: var(--red); }
@@ -66,11 +71,13 @@ img { max-width: 100%; display: block; }
 .badge.soon { background: var(--asphalt-3); color: var(--muted); border: 1px solid var(--line); cursor: default; }
 .small { font-size: 14px; color: var(--muted); }
 
-/* Screenshot slots (filled from the phone before launch) */
-.shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 40px 0 0; }
-.shot { aspect-ratio: 2868 / 1320; border-radius: var(--radius); background: var(--asphalt-2); border: 1px dashed var(--line); display: flex; align-items: flex-end; overflow: hidden; position: relative; }
-.shot img { width: 100%; height: 100%; object-fit: cover; }
-.shot span { position: absolute; left: 0; right: 0; bottom: 0; padding: 10px 14px; background: linear-gradient(transparent, rgba(0, 0, 0, 0.75)); font-weight: 700; font-size: 15px; text-align: left; }
+/* The store screenshots: a row to swipe along, each snapping into place. */
+.shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 28px 16px; scrollbar-width: thin; }
+.shot { flex: 0 0 min(560px, 86vw); scroll-snap-align: center; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); background: var(--asphalt-2); }
+.shot img { width: 100%; height: auto; aspect-ratio: 2868 / 1320; }
+
+/* The preview video */
+video.preview { width: 100%; height: auto; margin-top: 22px; border-radius: var(--radius); border: 1px solid var(--line); background: #000; }
 
 /* Sections */
 section { padding: 56px 0; }

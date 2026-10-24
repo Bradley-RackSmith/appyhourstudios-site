@@ -7,7 +7,7 @@
   <meta name="description" content="A racing game for iPhone that turns real roads into tracks: famous racetracks, city circuits past their landmarks, mountain hill climbs, and the streets outside your door.">
   <meta property="og:title" content="ReRoute Racing: Race Any Road">
   <meta property="og:description" content="Real racetracks, city circuits, hill climbs, and the streets outside your door. No ads, nothing that buys speed.">
-  <meta property="og:image" content="assets/icon.png">
+  <meta property="og:image" content="https://appyhourstudios.com/reroute/assets/hero.jpg">
   <link rel="icon" href="assets/icon.png">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -16,6 +16,7 @@
     <div class="wrap">
       <a class="brand" href="./"><img src="assets/icon.png" alt="">ReRoute Racing</a>
       <nav class="nav">
+        <a href="#video" class="hide-sm">Video</a>
         <a href="#tracks">Tracks</a>
         <a href="#garage" class="hide-sm">Garage</a>
         <a href="#faq">FAQ</a>
@@ -25,6 +26,8 @@
   </header>
 
   <div class="hero">
+    <!-- The App Store header loop: Paris, past the Eiffel Tower (silent). -->
+    <video class="hero-video" src="assets/hero.mp4" poster="assets/hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
     <div class="wrap">
       <img class="icon" src="assets/icon.png" alt="ReRoute Racing app icon">
       <h1>Race <em>any</em> road.</h1>
@@ -32,16 +35,28 @@
       <!-- Swap for the official "Download on the App Store" badge and link at launch. -->
       <span class="badge soon">Coming soon to the App Store</span>
       <p class="small">Free to start. No ads. Nothing that buys speed.</p>
-
-      <!-- Screenshots: 2868 × 1320 captures from the phone go in assets/ (shot-1.png ...). -->
-      <div class="shots">
-        <div class="shot"><span>Down the Corkscrew at Monterey Raceway</span></div>
-        <div class="shot"><span>Times Square, screens and all</span></div>
-        <div class="shot"><span>Above the clouds on Pikes Peak</span></div>
-      </div>
     </div>
   </div>
   <div class="checker"></div>
+
+  <!-- The store screenshots: swipe along; each opens full size. -->
+  <div class="shots" aria-label="Screenshots">
+        <a class="shot" href="assets/press/01-race-any-road.png"><img src="assets/shots/01.jpg" width="1434" height="660" loading="lazy" alt="Race any road: the Corkscrew at Monterey Raceway"></a>
+        <a class="shot" href="assets/press/02-real-racetracks.png"><img src="assets/shots/02.jpg" width="1434" height="660" loading="lazy" alt="Real racetracks: grandstands and tyre walls"></a>
+        <a class="shot" href="assets/press/03-famous-cities.png"><img src="assets/shots/03.jpg" width="1434" height="660" loading="lazy" alt="Famous cities: Paris and the Eiffel Tower"></a>
+        <a class="shot" href="assets/press/04-draw-your-own-course.png"><img src="assets/shots/04.jpg" width="1434" height="660" loading="lazy" alt="Draw your own course on the real map"></a>
+        <a class="shot" href="assets/press/05-climb-real-mountains.png"><img src="assets/shots/05.jpg" width="1434" height="660" loading="lazy" alt="Climb real mountains: Pikes Peak"></a>
+        <a class="shot" href="assets/press/06-chase-platinum.png"><img src="assets/shots/06.jpg" width="1434" height="660" loading="lazy" alt="Chase platinum: the results"></a>
+        <a class="shot" href="assets/press/07-build-your-garage.png"><img src="assets/shots/07.jpg" width="1434" height="660" loading="lazy" alt="Build your Garage: the GT"></a>
+  </div>
+
+  <section class="alt" id="video">
+    <div class="wrap">
+      <h2>See it in action</h2>
+      <p>Thirty seconds of real roads, from the Corkscrew to the finish line. Tap to play, with the game's own ReRoute FM.</p>
+      <video class="preview" src="assets/preview.mp4" poster="assets/preview.jpg" controls preload="none" playsinline width="1920" height="886"></video>
+    </div>
+  </section>
 
   <section>
     <div class="wrap">
