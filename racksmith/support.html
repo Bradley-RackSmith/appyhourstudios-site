@@ -4,35 +4,52 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Support: RackSmith Fitness</title>
-<meta name="description" content="Help with RackSmith Fitness: contact support and answers to common questions." />
+<meta name="description" content="Help with RackSmith Fitness: contact support and answers to common questions about plans, workouts, conditioning, Pro and your data." />
+<meta name="theme-color" content="#0a0a0a" />
 <link rel="icon" href="favicon.png" />
 <link rel="apple-touch-icon" href="icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="wrap top">
-  <a class="brand" href="./"><img src="icon.png" alt="" /><span>RackSmith</span></a>
-  <nav class="nav"><a href="./">Home</a><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="36" height="36" /><span>RackSmith</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="./#features">Features</a>
+      <a href="support.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="nav-cta" href="./#get">Get the app</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap narrow page">
+<main id="main" class="wrap narrow page">
   <div class="kicker">Support</div>
-  <h1>How can we <em>help?</em></h1>
-  <div class="stripes"><span style="flex: 6"></span><span style="flex: 1"></span><span style="flex: 0.5"></span></div>
+  <h1 style="margin-top: 12px">How can we <em>help?</em></h1>
+  <div class="stripes"><span></span><span></span><span></span></div>
 
   <div class="contact">
     <p class="lede">Questions, problems or ideas? Email us and we'll get back to you.</p>
-    <p><a href="mailto:racksmith.support@appyhourstudios.com?subject=RackSmith%20Fitness%20support">racksmith.support@appyhourstudios.com</a></p>
-    <p class="muted">It helps to include your iPhone model, your iOS version, and what you were doing when the problem happened.</p>
+    <a class="mail" href="mailto:racksmith.support@appyhourstudios.com?subject=RackSmith%20Fitness%20support">racksmith.support@appyhourstudios.com</a>
+    <p class="muted">It helps to include your iPhone model, your iOS version and what you were doing when the problem happened.</p>
   </div>
 
   <h2>Common <em>questions</em></h2>
 
+  <div class="faq-group">Getting started</div>
+
   <details>
     <summary>How does RackSmith pick my exercises?</summary>
-    <p>From the equipment you tick in setup, your goal, the days you train and how long your sessions are. Every exercise and warm-up uses only what's on your equipment list.</p>
+    <p>From the equipment you choose in setup, your goal, the days you train and how long your sessions are. Every exercise and warm-up uses only what's on your equipment list.</p>
+  </details>
+
+  <details data-only="1.3">
+    <summary>Do I need a strength plan?</summary>
+    <p>No. You can skip the plan in setup and use conditioning workouts or workouts you build yourself. When you're ready, tap <strong>Build my plan</strong> on the Plan tab or in <strong>Settings</strong>.</p>
   </details>
 
   <details>
@@ -41,23 +58,8 @@
   </details>
 
   <details>
-    <summary>The starting weights look too light or too heavy.</summary>
-    <p>That's expected the first time. The first couple of times you do a weighted lift, the app asks after each set how many more reps you could have done, and sets the next set's weight from your answer. You can also change the weight on any set when you log it, and later weeks follow.</p>
-  </details>
-
-  <details>
-    <summary>How do I swap an exercise?</summary>
-    <p>On the Plan screen, tap <strong>Swap</strong> under any exercise in a day you haven't done yet. Pick an alternative and choose <strong>This session</strong> or <strong>From now on</strong>. Choose the original again to undo it.</p>
-  </details>
-
-  <details>
-    <summary>When does the weight go up?</summary>
-    <p>When you've earned it: hit your reps on every set and the next session is heavier. For some lifts, and for experienced lifters, you climb the rep range first, and the app shows the rep goal ("aim for 12"). Miss twice in a row and it eases off about 10%.</p>
-  </details>
-
-  <details>
     <summary>Can more than one person use the app?</summary>
-    <p>Yes. Each person has their own profile, plan, equipment and history. Tap your name on the Plan screen to switch, or choose <strong>Add a new user</strong> on the start screen.</p>
+    <p>Yes. Each person has their own profile, plan, equipment and history. Tap your name on the Plan tab to switch, or choose <strong>Add a new user</strong> on the start screen.</p>
   </details>
 
   <details>
@@ -65,9 +67,49 @@
     <p>Yes. Go to <strong>Settings</strong> and choose <strong>Kilograms (kg)</strong>. Weights and plate math switch over.</p>
   </details>
 
+  <div class="faq-group">Workouts and progress</div>
+
+  <details>
+    <summary>The starting weights look too light or too heavy.</summary>
+    <p>That's expected at first. The first couple of times you do a weighted lift, the app asks after each set how many more reps you could have done, and sets the next set's weight from your answer. You can also change the weight on any set when you log it, and later weeks follow.</p>
+  </details>
+
+  <details>
+    <summary>When does the weight go up?</summary>
+    <p>When you've earned it: hit your reps on every set and the next session is heavier. For some lifts, and for experienced lifters, you climb the rep range first, and the app shows the rep goal ("aim for 12"). Miss twice in a row and it eases off by about 10%.</p>
+  </details>
+
+  <details>
+    <summary>How do I swap an exercise?</summary>
+    <p>On the Plan tab, tap <strong>Swap</strong> under any exercise in a day you haven't done yet. Pick an alternative and choose <strong>This session</strong> or <strong>From now on</strong>. Choose the original again to undo it.</p>
+  </details>
+
+  <details data-only="1.1">
+    <summary>How do I see how to do an exercise?</summary>
+    <p>Tap the exercise's name, in your plan or during a workout, to open its guide: the key cue, step-by-step instructions, common mistakes and when to swap it.</p>
+  </details>
+
+  <details data-only="1.4">
+    <summary>How do I build my own workout?</summary>
+    <p>On the Plan tab, under <strong>Your workouts</strong>, tap <strong>Build your own workout</strong>. Add exercises, set the sets, reps and rest, and pair exercises into supersets if you like. One saved workout is free; RackSmith Pro saves as many as you like and can make a weekly plan from them.</p>
+  </details>
+
+  <details data-only="1.3">
+    <summary>What is the weekly check-in?</summary>
+    <p>A short set of questions on Sunday evening about how training felt that week. If you've been worn down for two weeks running, it offers a lighter week. Switch it on or off in <strong>Settings</strong>. It needs a strength plan.</p>
+  </details>
+
+  <details data-only="1.3">
+    <summary>Can I export my workouts?</summary>
+    <p>Yes. Go to <strong>History → Insights</strong> and tap <strong>Export workout history</strong>. You get a spreadsheet (CSV) of every set and every conditioning workout, to save to Files, AirDrop or email.</p>
+  </details>
+
+  <div class="faq-group">Timers and sound</div>
+
   <details>
     <summary>The rest timer when my phone is locked</summary>
     <p>The rest timer keeps time while your phone is locked, and a notification tells you when rest is over. If you don't get it, check <strong>iPhone Settings → Notifications → RackSmith</strong> and make sure notifications are allowed.</p>
+    <p data-only="1.1">With <strong>RackSmith Pro</strong>, the countdown and your next set also show on the lock screen and in the Dynamic Island. If they don't appear, check that <strong>Live Activities</strong> is on in <strong>iPhone Settings → RackSmith</strong>.</p>
   </details>
 
   <details>
@@ -75,22 +117,70 @@
     <p>No. Countdown beeps play over your music without pausing it. You can turn sound and haptics off in <strong>Settings</strong>.</p>
   </details>
 
+  <div class="faq-group" data-only="1.3">Conditioning</div>
+
+  <details data-only="1.3">
+    <summary>What conditioning workouts are there?</summary>
+    <p>EMOM (every minute on the minute), AMRAP (as many rounds as possible), intervals and For Time, built from your equipment. Starter 12, a 12-minute workout with no equipment, is free for everyone. With RackSmith Pro, you can build workouts by length, intensity and format, save them, and add a short finisher after strength days.</p>
+  </details>
+
+  <details data-only="1.3">
+    <summary>How do the workouts get harder?</summary>
+    <p>From your results. Before your first workout, two quick questions set a starting level, and each workout you finish moves the level from there.</p>
+  </details>
+
+  <div class="faq-group" data-only="1.4">Apple Watch and Apple Health</div>
+
+  <details data-only="1.4">
+    <summary>How do I use RackSmith on my Apple Watch?</summary>
+    <p>The Watch app is part of RackSmith Pro. Install it from the <strong>Watch</strong> app on your iPhone (under <strong>Available Apps</strong>), then start a workout on your iPhone: it appears on your watch with the timer, the set and the buttons. If it doesn't open by itself, open RackSmith on the watch.</p>
+  </details>
+
+  <details data-only="1.4">
+    <summary>How do I save workouts to Apple Health?</summary>
+    <p>Turn on <strong>Apple Health</strong> in <strong>Settings</strong> and allow RackSmith to save workouts. Finished strength and conditioning workouts are saved from then on. RackSmith only saves workouts; it doesn't read anything from Health. Apple Health is free.</p>
+  </details>
+
+  <div class="faq-group" data-only="1.1">RackSmith Pro</div>
+
+  <details data-only="1.1">
+    <summary>What does RackSmith Pro add?</summary>
+    <p>More ways to train and more tools around your workouts: the lock screen timer and iCloud backup<span data-only="1.2">, Insights and Progress widgets</span><span data-only="1.3">, the conditioning builder and finishers</span><span data-only="1.4">, unlimited workouts of your own and the Apple Watch app</span>. Everything else stays free, and nothing that was free will move to Pro.</p>
+    <p>Pro is $4.99 a month, or $29.99 a year with a 7-day free trial (prices may differ by country). One subscription covers everyone who uses RackSmith on the same iPhone.</p>
+  </details>
+
+  <details data-only="1.1">
+    <summary>How do I cancel or change my subscription?</summary>
+    <p>Subscriptions are managed by Apple. Open the iPhone Settings app, tap your name, then <strong>Subscriptions</strong>, and choose RackSmith Pro. You can also get there from <strong>Settings → RackSmith Pro → Manage subscription</strong> in the app. Cancel at least 24 hours before the trial or the current period ends to avoid the next charge.</p>
+  </details>
+
+  <details data-only="1.1">
+    <summary>I paid for Pro, but the app doesn't show it.</summary>
+    <p>Open <strong>Settings → RackSmith Pro</strong> and tap <strong>Restore Purchases</strong>, signed in with the Apple ID you subscribed with. If that doesn't work, email us. For refunds, use Apple's <a href="https://reportaproblem.apple.com/">Report a Problem</a> page, since Apple handles all payments.</p>
+  </details>
+
+  <div class="faq-group">Your data</div>
+
   <details>
     <summary>Is my data backed up?</summary>
-    <p>Your workouts are stored only on your iPhone. If you delete the app, your data is deleted with it. RackSmith doesn't use an account or a server.</p>
+    <p data-only="1.1">Your workouts are stored on your iPhone. With <strong>RackSmith Pro</strong>, they're also backed up to your own iCloud after every workout. You can see when in <strong>Settings → iCloud backup</strong>, or tap <strong>Back up now</strong>.</p>
+    <p data-only="1.1">On a new phone, or after reinstalling, the start screen offers <strong>Restore from iCloud</strong>. You can also restore from <strong>Settings</strong>. Restoring is free, with or without Pro. If backup says iCloud isn't available, sign in to iCloud in the iPhone Settings app and make sure iCloud Drive is on.</p>
+    <p data-until="1.1">Your workouts are stored only on your iPhone. If you delete the app, your data is deleted with it. RackSmith doesn't use an account or a server.</p>
   </details>
 
   <details>
     <summary>How do I delete my data?</summary>
-    <p>In <strong>Settings</strong>, <strong>Delete [your name]</strong> removes one person and their history. <strong>Reset all data</strong> removes everyone on the phone. Deleting the app also removes all its data.</p>
+    <p>In <strong>Settings</strong>, <strong>Delete [your name]</strong> removes one person and their history. <strong>Reset all data</strong> removes everyone on the phone. Deleting the app also removes all its data from the phone.</p>
+    <p data-only="1.1">To delete an iCloud backup too, open the iPhone Settings app, tap your name, then <strong>iCloud</strong>, manage your storage, choose <strong>RackSmith Fitness</strong> and delete its data.</p>
   </details>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 RackSmith Fitness</span>
-    <span><a href="./">Home</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:racksmith.support@appyhourstudios.com">racksmith.support@appyhourstudios.com</a></span>
+    <span class="links"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="mailto:racksmith.support@appyhourstudios.com">racksmith.support@appyhourstudios.com</a></span>
   </div>
 </footer>
+<script src="site.js"></script>
 </body>
 </html>

@@ -3,63 +3,297 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>RackSmith Fitness: strength plans built around your gear</title>
-<meta name="description" content="RackSmith Fitness builds a strength training plan around the equipment you own, finds your real working weights and guides every set. No account, no ads." />
-<meta property="og:title" content="RackSmith Fitness" />
-<meta property="og:description" content="Strength plans built around the gear you own." />
-<meta property="og:image" content="banner.jpg" />
+<title>RackSmith Fitness: training built around the gear you own</title>
+<meta name="description" content="RackSmith Fitness builds strength plans and conditioning workouts from the equipment you own, finds your real working weights and guides every set. No account, no ads, and it works offline." />
+<meta name="theme-color" content="#0a0a0a" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="RackSmith Fitness: forge your own fitness" />
+<meta property="og:description" content="Strength plans and conditioning workouts built from the gear you own. No account, no ads, works offline." />
+<meta property="og:url" content="https://appyhourstudios.com/racksmith/" />
+<meta property="og:image" content="https://appyhourstudios.com/racksmith/banner.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="icon" href="favicon.png" />
 <link rel="apple-touch-icon" href="icon.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="wrap top">
-  <a class="brand" href="./"><img src="icon.png" alt="" /><span>RackSmith</span></a>
-  <nav class="nav"><a href="./" aria-current="page">Home</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="36" height="36" /><span>RackSmith</span></a>
+    <nav class="nav" aria-label="Main">
+      <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#pricing" data-only="1.1">Free &amp; Pro</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="nav-cta" href="#get">Get the app</a>
+    </nav>
+  </div>
 </header>
 
-<main class="wrap">
+<main id="main">
   <section class="hero">
-    <img class="logo" src="logo.png" alt="RackSmith Fitness logo: a flexed arm curling a dumbbell" />
-    <div>
-      <div class="kicker">RackSmith Fitness</div>
-      <h1>Forge <em>your own</em> fitness</h1>
-      <div class="stripes"><span style="flex: 6"></span><span style="flex: 1"></span><span style="flex: 0.5"></span></div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">RackSmith Fitness for iPhone</div>
+        <h1 style="margin-top: 14px">Forge <em>your own</em> fitness</h1>
+        <div class="stripes"><span></span><span></span><span></span></div>
+        <p class="lede">Strength plans and conditioning workouts built from the equipment you actually own. RackSmith finds your real working weights, guides every set and moves you forward when you've earned it.</p>
+        <a class="store pending" id="get">
+          <span><span class="store-top">Coming soon to the</span><span class="store-main">App Store</span></span>
+        </a>
+        <ul class="trust">
+          <li>No account</li>
+          <li>No ads</li>
+          <li>Works offline</li>
+          <li>Free core, forever</li>
+        </ul>
+      </div>
+      <div class="phones" aria-hidden="true">
+        <div class="phone"><img src="shot-plan.webp" alt="" width="600" height="1173" /></div>
+        <div class="phone"><img src="shot-rest.webp" alt="" width="600" height="1173" /></div>
+      </div>
     </div>
-    <p class="lede">A strength training plan built around the equipment you actually own, with every set guided and every weight earned. Home gym, garage or commercial gym.</p>
-    <span class="badge">Coming soon on the App Store for iPhone</span>
   </section>
 
-  <img class="banner" src="banner.jpg" alt="RackSmith Fitness on iPhone: the plan preview, a guided set and a strength chart" />
-
-  <h2>Built for <em>your gear</em></h2>
-  <div class="features">
-    <div class="card"><h3>Plans that fit what you own</h3><p>Tick your equipment, pick a goal and your schedule. Every exercise, warm-up and weight uses only what you have.</p></div>
-    <div class="card"><h3>Finds your real weights</h3><p>The first times you do a lift, it asks how hard each set felt and sets the next one. No generic guesses.</p></div>
-    <div class="card"><h3>Every set, guided</h3><p>Targets, plate math, timers and what you lifted last time, all on one screen.</p></div>
-    <div class="card"><h3>Progression you earn</h3><p>Weight goes up when you've hit your reps. Big jumps are earned with reps first.</p></div>
-    <div class="card"><h3>Swap any exercise</h3><p>Bench taken? Swap for a like movement your equipment supports, for one session or from then on.</p></div>
-    <div class="card"><h3>Progress you can see</h3><p>Personal bests at the end of every session, and a strength chart for every exercise.</p></div>
+  <div class="strip">
+    <ul class="wrap">
+      <li><strong>Home gym</strong></li>
+      <li><strong>Garage gym</strong></li>
+      <li><strong>Commercial gym</strong></li>
+      <li><strong>Just dumbbells</strong> or bands</li>
+      <li><strong>No equipment</strong> at all</li>
+    </ul>
   </div>
 
-  <div class="shots">
-    <img src="shot-plan.jpg" alt="Workouts built for your gear: the plan preview" loading="lazy" />
-    <img src="shot-set.jpg" alt="Every set, guided: a set with plate math and last time" loading="lazy" />
-    <img src="shot-calibrate.jpg" alt="Finds your real weights: the calibration question" loading="lazy" />
-    <img src="shot-bests.jpg" alt="Progress you can see: personal bests after a session" loading="lazy" />
+  <div class="wrap" id="features">
+    <section class="feature">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-equipment.webp" alt="Setup: choosing your equipment, from barbells and plates to dumbbells, with a one-tap commercial gym" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Your plan</div>
+        <h2>Built for <em>your gear</em></h2>
+        <p class="lede">Choose the equipment you have, then pick a goal and how often you can train. Every exercise, warm-up and weight in your plan uses only that equipment.</p>
+        <ul class="points">
+          <li><strong>Plans from 4 weeks to open-ended,</strong> 2 to 6 days a week, 30 to 90 minutes a session.</li>
+          <li><strong>Swap any exercise</strong> for one your gear supports, for one session or from then on.</li>
+          <li><strong>Warm-ups that fit the lift,</strong> with ramp-up sets worked out for you.</li>
+          <li><strong>Everyone on one iPhone</strong> gets their own plan, equipment and history.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature flip">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-set.webp" alt="A guided set: Barbell Bench Press, set 1 of 4, 6-8 reps at 170 lb, with the plates to load per side" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Every set, guided</div>
+        <h2>Real weights, <em>earned</em></h2>
+        <p class="lede">No generic guesses. The first time you do a lift, RackSmith asks how many more reps you had left and sets the next set from your answer.</p>
+        <ul class="points">
+          <li><strong>Plate math</strong> on every set, built on the bars and plates you own.</li>
+          <li><strong>Weights go up when you hit your reps,</strong> and ease off if you miss twice in a row.</li>
+          <li><strong>A rest timer with countdown beeps</strong> that play over your music.</li>
+          <li><strong>What you lifted last time,</strong> right there on the screen.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature" data-v="1.3">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-intervals.webp" alt="An intervals workout: work, round 2 of 20, 23 seconds left on Band Row" width="600" height="1173" loading="lazy" /></div>
+        <div class="phone"><img src="shot-builder.webp" alt="The conditioning builder: length, intensity and format, with a 20-minute intervals workout ready to start" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Conditioning</div>
+        <h2>A second way <em>to train</em></h2>
+        <p class="lede">EMOM, AMRAP, intervals and For Time, built from your equipment in seconds and timed for you, with beeps, cues and a fanfare when the work is done.</p>
+        <ul class="points">
+          <li><strong>Pick the length, intensity and format,</strong> or let it choose.</li>
+          <li><strong>Workouts step up as you get fitter,</strong> based on your results.</li>
+          <li><strong>Optional finishers:</strong> a short conditioning block after a strength day.</li>
+          <li><strong>Starter 12 is free</strong> for everyone. Building your own workouts is part of Pro.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature flip" data-v="1.2">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-guide.webp" alt="The movement guide for the Goblet Squat: an animated figure, the key cue and step-by-step instructions" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Movement guides <span class="tag free">Free</span></div>
+        <h2>Know every <em>movement</em></h2>
+        <p class="lede">Every exercise in the library, more than 120 of them, has a guide: an animated figure, the key cue, step-by-step instructions, common mistakes and when to swap it.</p>
+        <ul class="points">
+          <li><strong>Tap any exercise name</strong> in your plan or a workout to open its guide.</li>
+          <li><strong>Motion that follows good coaching:</strong> bar paths, tempo and the key positions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature" data-v="1.2">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-chart.webp" alt="The strength chart for Barbell Bench Press: estimated one-rep max climbing, with a personal best of 220 lb for 11" width="600" height="1173" loading="lazy" /></div>
+        <div class="phone"><img src="shot-insights.webp" alt="Insights: hard sets per muscle last week against the 10 to 20 set guide, and workouts over the last 8 weeks" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Progress</div>
+        <h2>Watch your <em>strength climb</em></h2>
+        <p class="lede">Personal bests at the end of every session, a strength chart for every exercise and your full history, all on your phone.</p>
+        <ul class="points">
+          <li><strong>Insights</strong> <span class="tag pro">Pro</span> show hard sets per muscle each week, your streak and how often you train.</li>
+          <li><strong>Export everything</strong> as a spreadsheet (CSV), free.</li>
+          <li><strong>Body weight</strong> tracking, in pounds or kilograms.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="feature flip" data-v="1.4">
+      <div class="feature-media">
+        <div class="phone"><img src="shot-custom.webp" alt="Building your own workout: Arms and Shoulders, with a superset of curls and bench dips" width="600" height="1173" loading="lazy" /></div>
+      </div>
+      <div>
+        <div class="kicker">Build your own</div>
+        <h2>Your program, <em>your way</em></h2>
+        <p class="lede">Already follow your own routine? Build it in RackSmith and keep the same guided sets, timers, weights that follow what you lift, and history.</p>
+        <ul class="points">
+          <li><strong>Pick exercises, sets, reps and rest,</strong> and pair them into supersets.</li>
+          <li><strong>One saved workout is free.</strong> Pro saves as many as you like and turns them into a weekly plan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="center">
+        <div class="kicker">And there's more</div>
+        <h2 style="margin-top: 12px">Everything <em>in the box</em></h2>
+      </div>
+      <div class="grid">
+        <div class="tile" data-v="1.4">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6l1-4h4l1 4M9 18l1 4h4l1-4M12 10v2l1.5 1.5"/></svg></div>
+          <h3>Apple Watch <span class="tag pro">Pro</span></h3>
+          <p>Your workout on your wrist: the timer, the set and the buttons, so your phone can stay in your pocket.</p>
+        </div>
+        <div class="tile" data-v="1.4">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg></div>
+          <h3>Apple Health <span class="tag free">Free</span></h3>
+          <p>Finished workouts are saved to Apple Health, if you switch it on.</p>
+        </div>
+        <div class="tile" data-v="1.1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 6h4M12 11v3l2 1"/></svg></div>
+          <h3>Lock screen timer <span class="tag pro">Pro</span></h3>
+          <p>The countdown and your next set on the lock screen and in the Dynamic Island.</p>
+        </div>
+        <div class="tile" data-v="1.2">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></div>
+          <h3>Widgets</h3>
+          <p>Next Up on your Home Screen, free. Progress widgets for the Home Screen and lock screen with Pro.</p>
+        </div>
+        <div class="tile" data-v="1.1">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18a5 5 0 0 1-.6-10A6 6 0 0 1 18 9a4.5 4.5 0 0 1-.5 9z"/><path d="M12 11v5M9.5 13.5L12 16l2.5-2.5"/></svg></div>
+          <h3>iCloud backup <span class="tag pro">Pro</span></h3>
+          <p>Backed up to your own iCloud after every workout. Restoring is always free.</p>
+        </div>
+        <div class="tile" data-v="1.3">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></svg></div>
+          <h3>Weekly check-in <span class="tag free">Free</span></h3>
+          <p>A quick Sunday check on how you're feeling, with a lighter week offered when you need one.</p>
+        </div>
+        <div class="tile">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14a6 6 0 0 1 3.5 6"/></svg></div>
+          <h3>Train together</h3>
+          <p>Add everyone who trains on the same iPhone. Each person gets their own plan and history.</p>
+        </div>
+        <div class="tile">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><path d="M3 3l18 18"/></svg></div>
+          <h3>No signal? No problem.</h3>
+          <p>Your plan, timers and history work without a connection, so a basement gym is fine.</p>
+        </div>
+      </div>
+    </section>
   </div>
 
-  <h2>No account. <em>No ads.</em></h2>
-  <p class="lede">Your workouts stay on your phone. <a href="privacy.html">Read the privacy policy</a>.</p>
+  <section class="privacy-band">
+    <div class="wrap">
+      <div class="kicker">Private by design</div>
+      <h2 style="margin-top: 12px">Your training <em>stays yours</em></h2>
+      <div class="pillars">
+        <div class="pillar"><h3>No account</h3><p>Open the app and start. No sign-up, no password, no email.</p></div>
+        <div class="pillar"><h3>On your iPhone</h3><p>Your workouts are stored on your phone, not on our servers. We don't have any.</p></div>
+        <div class="pillar"><h3>No ads, no tracking</h3><p>No advertising, analytics or tracking tools.</p></div>
+        <div class="pillar"><h3>Works offline</h3><p>Your plan, workouts, timers and history all work without a connection.</p></div>
+      </div>
+      <p class="fine"><a href="privacy.html">Read the privacy policy</a></p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="section" id="pricing" data-only="1.1">
+      <div class="center">
+        <div class="kicker">Free &amp; Pro</div>
+        <h2 style="margin-top: 12px">A strong free app. <em>Pro that earns it.</em></h2>
+        <p class="lede">Everything you need to train is free, and anything free stays free. Pro adds more ways to train and more tools around your workouts.</p>
+      </div>
+      <div class="plans">
+        <div class="plan">
+          <h3>Free</h3>
+          <p class="price"><strong>$0</strong>, forever</p>
+          <ul>
+            <li>Strength plans built from your equipment</li>
+            <li>Guided sets, plate math, warm-ups and rest timer</li>
+            <li>Weights that find your level and progress with you</li>
+            <li>Exercise swaps</li>
+            <li>History, personal bests and strength charts</li>
+            <li data-v="1.1">Movement guides for every exercise</li>
+            <li data-v="1.3">Starter 12 conditioning workout</li>
+            <li data-v="1.4">One workout you build yourself</li>
+            <li data-v="1.3">Weekly check-in and CSV export</li>
+            <li data-v="1.2">Next Up widget</li>
+            <li data-v="1.4">Apple Health</li>
+          </ul>
+        </div>
+        <div class="plan pro-plan">
+          <h3>RackSmith Pro</h3>
+          <p class="price"><strong>$29.99</strong> a year with a 7-day free trial, or <strong>$4.99</strong> a month</p>
+          <ul>
+            <li>Lock screen and Dynamic Island timer</li>
+            <li>iCloud backup</li>
+            <li data-v="1.2">Insights and Progress widgets</li>
+            <li data-v="1.3">The conditioning builder and finishers</li>
+            <li data-v="1.4">Unlimited workouts of your own, and plans made from them</li>
+            <li data-v="1.4">Apple Watch app</li>
+          </ul>
+          <p class="fine">One subscription covers everyone who uses RackSmith on the same iPhone. Prices may differ by country.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <img class="logo" src="logo.webp" alt="RackSmith Fitness logo: a flexed arm curling a dumbbell" width="440" height="440" loading="lazy" />
+      <h2>Ready to <em>forge</em> your own?</h2>
+      <p class="lede">Tell RackSmith what you've got, and your first workout is ready in a few minutes.</p>
+      <a class="store pending">
+        <span><span class="store-top">Coming soon to the</span><span class="store-main">App Store</span></span>
+      </a>
+    </section>
+  </div>
 </main>
 
 <footer>
   <div class="wrap">
     <span>© 2026 RackSmith Fitness</span>
-    <span><a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:racksmith.support@appyhourstudios.com">racksmith.support@appyhourstudios.com</a></span>
+    <span class="links"><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:racksmith.support@appyhourstudios.com">racksmith.support@appyhourstudios.com</a></span>
   </div>
 </footer>
+<script src="site.js"></script>
+<script>
+  addEventListener('scroll', function () { document.querySelector('.top').classList.toggle('scrolled', scrollY > 8); }, { passive: true });
+</script>
 </body>
 </html>
