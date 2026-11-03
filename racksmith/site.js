@@ -4,8 +4,8 @@
 // LIVE shows a "Coming soon" tag; data-only="1.x" items stay hidden until then,
 // and data-until="1.x" items (old answers) disappear once 1.x is live.
 var LIVE = '1.0';
-var APP_LIVE = false;
-var APP_URL = 'https://apps.apple.com/app/id6819852093';
+var APP_LIVE = true;
+var APP_URL = 'https://apps.apple.com/us/app/racksmith-fitness/id6819852093';
 
 (function () {
   function newer(v) {
