@@ -3,7 +3,7 @@
 // RackSmith is on the App Store). Everything marked data-v="1.x" newer than
 // LIVE shows a "Coming soon" tag; data-only="1.x" items stay hidden until then,
 // and data-until="1.x" items (old answers) disappear once 1.x is live.
-var LIVE = '1.0';
+var LIVE = '1.4';
 var APP_LIVE = true;
 var APP_URL = 'https://apps.apple.com/us/app/racksmith-fitness/id6819852093';
 
