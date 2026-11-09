@@ -2,7 +2,7 @@
    Colours come from the logo artwork (assets/appy-hour-hero.jpg): its pale grey
    backdrop, navy lettering, and the orange and blue of the app tiles. */
 :root {
-  --bg: #dfe3e6;
+  --bg: #e0e0e5;   /* the logo picture's own backdrop */
   --card: #ffffff;
   --line: #c9cfd6;
   --text: #141a3a;
@@ -42,18 +42,43 @@ a:hover { color: var(--orange-ink); }
 
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
 
-/* The logo artwork, its soft edges faded into the page so it doesn't sit in a box. */
-.top { padding: 8px 0 4px; text-align: center; }
-.logo {
-  display: block;
-  width: 100%;
-  max-width: 860px;
-  height: auto;
-  margin: 0 auto;
-  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
-  mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+/* The header: the logo picture (its grey backdrop made transparent, so it sits
+   straight on the page) and the name set as real text, sharp at any size. */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 36px;
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
-.tagline { margin: 0 auto; color: var(--muted); font-size: 18px; }
+.mark {
+  display: block;
+  width: 320px;
+  height: auto;
+}
+.name h1 { margin: 0; line-height: 0.95; }
+.appy {
+  display: block;
+  font-size: clamp(44px, 8vw, 72px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+.studios {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: clamp(20px, 3.4vw, 28px);
+  font-weight: 800;
+  letter-spacing: 0.55em;
+  margin-right: -0.55em;  /* no trailing gap after the last letter */
+  text-transform: uppercase;
+  background: var(--tiles);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.tagline { margin: 16px 0 0; color: var(--muted); font-size: 18px; }
 
 /* The 404 page still uses the text brand. */
 .brand {
@@ -115,7 +140,8 @@ a:hover { color: var(--orange-ink); }
 footer { margin-top: 36px; padding: 20px 16px 48px; color: var(--muted); font-size: 14px; border-top: 2px solid; border-image: var(--tiles) 1; }
 
 @media (max-width: 599px) {
-  .logo { width: min(80vw, 360px); }
+  .top { flex-direction: column; text-align: center; padding-top: 8px; }
+  .mark { width: 240px; }
 }
 
 @media (max-width: 520px) {
