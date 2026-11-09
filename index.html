@@ -5,14 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Appy Hour Studios</title>
   <meta name="description" content="Appy Hour Studios makes iPhone apps and games: ReRoute Racing and RackSmith Fitness.">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#dfe3e6">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Appy Hour Studios">
+  <meta property="og:title" content="Appy Hour Studios">
+  <meta property="og:description" content="Small studio, iPhone apps and games: ReRoute Racing and RackSmith Fitness.">
+  <meta property="og:url" content="https://appyhourstudios.com/">
+  <meta property="og:image" content="https://appyhourstudios.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Appy Hour Studios logo: an hourglass inside a phone, filling with app icons">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="studio.css">
 </head>
 <body>
   <header class="top">
-    <div class="wrap">
-      <div class="brand">Appy Hour Studios</div>
-      <p class="tagline">Small studio, iPhone apps and games.</p>
-    </div>
+    <h1 class="sr-only">Appy Hour Studios</h1>
+    <picture>
+      <source media="(max-width: 599px)" srcset="assets/appy-hour-logo-small.webp 285w, assets/appy-hour-logo.webp 570w" sizes="min(80vw, 360px)" type="image/webp">
+      <source media="(max-width: 599px)" srcset="assets/appy-hour-logo.png">
+      <source srcset="assets/appy-hour-hero.webp" type="image/webp">
+      <img class="logo" src="assets/appy-hour-hero.jpg" width="1375" height="768" alt="Appy Hour Studios: an hourglass inside a phone, filling with app icons">
+    </picture>
+    <p class="tagline wrap">Small studio, iPhone apps and games.</p>
   </header>
 
   <main class="wrap">
@@ -44,6 +64,6 @@
     </section>
   </main>
 
-  <footer class="wrap">© 2026 Bradley Wynhof · Appy Hour Studios</footer>
+  <footer class="wrap">© 2026 Appy Hour Studios, LLC</footer>
 </body>
 </html>

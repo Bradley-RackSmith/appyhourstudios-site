@@ -1,12 +1,21 @@
-/* Appy Hour Studios: the studio's home page. Each app's pages keep their own look. */
+/* Appy Hour Studios: the studio's home page. Each app's pages keep their own look.
+   Colours come from the logo artwork (assets/appy-hour-hero.jpg): its pale grey
+   backdrop, navy lettering, and the orange and blue of the app tiles. */
 :root {
-  --bg: #17141a;
-  --card: #221e26;
-  --line: #3a3340;
-  --text: #f5f2ee;
-  --muted: #b3aab8;
-  --amber: #f2a93b;
-  --amber-2: #e0782f;
+  --bg: #dfe3e6;
+  --card: #ffffff;
+  --line: #c9cfd6;
+  --text: #141a3a;
+  --muted: #4f5672;
+  /* The app tiles' colours, as drawn: cyan into blue, orange into coral. */
+  --cyan: #34c3e6;
+  --blue: #2f8fe0;
+  --orange: #f28a2e;
+  --coral: #ec6a5a;
+  --tiles: linear-gradient(90deg, var(--cyan), var(--blue) 35%, var(--orange) 70%, var(--coral));
+  /* Darker versions for text, readable on white and on the page grey. */
+  --blue-ink: #1863a8;
+  --orange-ink: #b04a08;
   --radius: 16px;
 }
 
@@ -20,54 +29,94 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--amber); }
-a:hover { color: #ffc56e; }
+/* A thin strip of the tile colours along the top of every page. */
+body::before { content: ""; display: block; height: 5px; background: var(--tiles); }
+
+a { color: var(--blue-ink); }
+a:hover { color: var(--orange-ink); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
 
-.top { padding: 56px 0 28px; background: linear-gradient(160deg, #2b1f2a, var(--bg) 70%); }
+/* The logo artwork, its soft edges faded into the page so it doesn't sit in a box. */
+.top { padding: 8px 0 4px; text-align: center; }
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 860px;
+  height: auto;
+  margin: 0 auto;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+  mask-image: radial-gradient(ellipse 72% 70% at 50% 50%, #000 62%, transparent 100%);
+}
+.tagline { margin: 0 auto; color: var(--muted); font-size: 18px; }
+
+/* The 404 page still uses the text brand. */
 .brand {
   font-size: clamp(30px, 7vw, 46px);
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(90deg, var(--amber), var(--amber-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text);
 }
-.tagline { margin: 6px 0 0; color: var(--muted); }
 
 .apps { display: grid; gap: 16px; margin: 28px 0 36px; }
 .app {
+  position: relative;
+  overflow: hidden;
   display: flex;
   gap: 18px;
   align-items: center;
-  padding: 18px;
+  padding: 18px 18px 18px 24px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   color: var(--text);
   text-decoration: none;
+  box-shadow: 0 1px 3px rgba(20, 26, 58, 0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
 }
-.app:hover { border-color: var(--amber); color: var(--text); }
+/* Each card's edge: cool tones down the side, warming toward the bottom. */
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(180deg, var(--cyan), var(--blue) 40%, var(--orange) 75%, var(--coral));
+}
+.app:hover {
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(47, 143, 224, 0.18), 0 2px 6px rgba(242, 138, 46, 0.12);
+}
+@media (prefers-reduced-motion: reduce) { .app, .app:hover { transition: none; transform: none; } }
 .app img, .placeholder { width: 88px; height: 88px; border-radius: 20px; flex: none; }
 .placeholder {
   display: grid;
   place-items: center;
   font-size: 40px;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--amber), var(--amber-2));
-  color: var(--bg);
+  background: linear-gradient(135deg, var(--cyan), var(--blue), var(--orange), var(--coral));
+  color: #fff;
 }
 .app h2 { margin: 0 0 4px; font-size: 21px; }
 .app p { margin: 0 0 6px; color: var(--muted); }
-.more { color: var(--amber); font-weight: 600; font-size: 15px; }
+.more { color: var(--orange-ink); font-weight: 600; font-size: 15px; }
+.app:hover .more { color: var(--blue-ink); }
 
-.contact h2 { font-size: 19px; margin: 0 0 8px; }
+.contact h2 { font-size: 19px; margin: 0 0 10px; }
+.contact h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 4px; border-radius: 2px; background: var(--tiles); }
 .contact ul { margin: 0; padding-left: 20px; color: var(--muted); }
 .contact li { margin: 4px 0; overflow-wrap: anywhere; }
 
-footer { padding: 36px 16px 48px; color: var(--muted); font-size: 14px; }
+footer { margin-top: 36px; padding: 20px 16px 48px; color: var(--muted); font-size: 14px; border-top: 2px solid; border-image: var(--tiles) 1; }
+
+@media (max-width: 599px) {
+  .logo { width: min(80vw, 360px); }
+}
 
 @media (max-width: 520px) {
   .app { flex-direction: column; align-items: flex-start; }
