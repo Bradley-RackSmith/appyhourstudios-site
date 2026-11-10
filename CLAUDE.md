@@ -15,7 +15,7 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | `favicon.ico`, `site.webmanifest`, `404.html`, `CNAME`, `.nojekyll` | Site-wide files (`CNAME` holds the domain: don't change it) |
 | `reroute/` | ReRoute Racing: home, support, privacy, press kit, `assets/` |
 | `reroute/remote-settings.json` | **Read by the live ReRoute app at launch** (map services on, slow or off; busy message). A broken file affects every player: keep it valid JSON and change it only on purpose. |
-| `racksmith/` | RackSmith Fitness: home, support, privacy |
+| `racksmith/` | RackSmith Fitness: home, support, privacy, press kit (`press.html`, files in `press/`) |
 | `racksmith/site.js` | `LIVE` (the version on the App Store), `APP_LIVE`, `APP_URL`; items tagged `data-v`, `data-only`, `data-until` show or hide by version |
 
 Each app's pages keep their own look, apart from one shared touch: the top navigation bar (`.top`
@@ -55,6 +55,9 @@ and name sit on a dark navy "aurora" band (`.band`, on the home and 404 pages) o
   web copies of the screenshots and videos into `reroute/assets/` here. It finds this repo next to
   it (`../appyhourstudios-site`), or wherever `SITE_REPO` points.
 - **RackSmith** screenshots and icons come from the RackSmith project; copy them into `racksmith/`.
+  The press kit's downloads in `racksmith/press/` are the 1.4 store set (`store-assets/app-store-1.4-6.9in/`,
+  `app-store-1.4-watch/`, `header-and-search-1.4/`, `assets/icon.png`), with `thumb-*.webp` previews made
+  from them. Refresh them when a release brings new screenshots.
 - App facts (features, prices, versions, what's free) come from each app's own project: check
   there, or ask, before changing claims on a page.
 
