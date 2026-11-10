@@ -70,6 +70,10 @@ h1 em, h2 em { font-style: normal; color: var(--amber); }
 .store.pending { background: transparent; color: var(--amber); border: 1.5px solid var(--amber-strong); cursor: default; }
 .store.pending svg { fill: var(--amber); }
 
+/* Apple's official App Store badge, unmodified (Apple's rules: at least 40px tall, no restyling). */
+.store-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+.store-badge img { height: 56px; width: auto; }
+
 /* Hero */
 .hero { position: relative; padding: 56px 0 40px; }
 .hero::before { content: ""; position: absolute; inset: -120px -30vw auto; height: 760px; background: radial-gradient(600px 420px at 70% 30%, rgba(239, 159, 39, 0.18), rgba(239, 159, 39, 0) 70%); pointer-events: none; z-index: -1; }

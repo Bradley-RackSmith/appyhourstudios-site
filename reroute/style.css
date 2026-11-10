@@ -68,6 +68,9 @@ img { max-width: 100%; display: block; }
   background: var(--red); color: #fff; text-decoration: none; font-weight: 800;
 }
 .badge:hover { background: var(--red-dark); color: #fff; }
+/* Apple's official App Store badge, unmodified (Apple's rules: at least 40px tall, no restyling). */
+.store-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+.store-badge img { height: 56px; width: auto; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .badge.soon { background: var(--asphalt-3); color: var(--muted); border: 1px solid var(--line); cursor: default; }
 .small { font-size: 14px; color: var(--muted); }
