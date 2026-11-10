@@ -59,5 +59,7 @@ Each app's pages keep their own look. The studio page takes its colours from the
 ## Logo
 
 The studio logo is the hourglass-in-a-phone art. `assets/appy-hour-mark*.webp` is the picture
-with its backdrop made transparent; the name next to it is real text. The source art is only
-1375×768, so a 2K or larger export would make the logo, favicons and link-preview image sharper.
+with its backdrop made transparent; the name next to it is real text. They, the icons and
+`og-image.jpg` come from a 2000×1125 export (logo about 650×820 of it) whose transparency
+checkerboard was painted in, so it was cut out by colour. A real transparent PNG at 2K or more
+would be sharper still.
