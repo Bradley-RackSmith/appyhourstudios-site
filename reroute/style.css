@@ -126,7 +126,7 @@ summary { cursor: pointer; font-weight: 700; }
 details p, details ul { color: var(--muted); margin: 10px 0 0; }
 
 /* Plain pages (support, privacy, press) */
-.page { padding: 48px 0 64px; max-width: 760px; }
+.page { padding: 48px 16px 64px; max-width: 760px; }
 .page h1 { font-size: clamp(32px, 5vw, 44px); margin: 0 0 6px; letter-spacing: -0.5px; }
 .page h2 { font-size: 24px; margin-top: 36px; }
 .page p, .page li { color: #d6d9e0; }
@@ -135,6 +135,7 @@ table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 15.5p
 th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
 th { color: var(--muted); font-weight: 700; }
 .facts td:first-child { color: var(--muted); width: 38%; }
+.facts td { overflow-wrap: anywhere; }  /* long addresses wrap instead of widening the page on phones */
 
 /* Footer */
 footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
