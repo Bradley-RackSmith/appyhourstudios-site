@@ -18,7 +18,8 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | `racksmith/` | RackSmith Fitness: home, support, privacy |
 | `racksmith/site.js` | `LIVE` (the version on the App Store), `APP_LIVE`, `APP_URL`; items tagged `data-v`, `data-only`, `data-until` show or hide by version |
 
-Each app's pages keep their own look. The studio page takes its colours from the logo art
+Each app's pages keep their own look, apart from one shared touch: the top navigation bar (`.top`
+in each app's `style.css`) uses the studio's aurora colours over navy with the tile strip beneath. The studio page takes its colours from the logo art
 (tokens at the top of `studio.css`: the tiles' cyan, blue, orange and coral, navy text). The logo
 and name sit on a dark navy "aurora" band (`.band`, on the home and 404 pages) over a near-white page.
 

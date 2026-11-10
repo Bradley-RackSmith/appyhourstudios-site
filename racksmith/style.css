@@ -37,6 +37,15 @@ img { max-width: 100%; height: auto; display: block; }
 /* Header */
 .top { position: sticky; top: 0; z-index: 5; background: rgba(10, 10, 10, 0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; }
 .top.scrolled { border-bottom-color: var(--border); }
+/* The Appy Hour Studios family bar: the studio page's aurora colours over navy,
+   edged with the studio's tile strip. The rest of the page keeps the app's own look. */
+.top {
+  background:
+    linear-gradient(100deg, rgba(52, 195, 230, 0.30), rgba(125, 108, 240, 0.28) 40%, rgba(212, 87, 179, 0.26) 62%, rgba(236, 106, 90, 0.28) 82%, rgba(246, 196, 69, 0.26)),
+    rgba(14, 20, 51, 0.94);
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #34c3e6, #2f8fe0 35%, #f28a2e 70%, #ec6a5a) 1;
+}
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--amber); font: 900 24px/1 Inter, sans-serif; letter-spacing: -0.5px; }
 .brand img { width: 36px; height: 36px; border-radius: 9px; }
