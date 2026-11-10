@@ -1,10 +1,11 @@
 /* Appy Hour Studios: the studio's home page. Each app's pages keep their own look.
-   Colours come from the logo artwork: its pale grey
-   backdrop, navy lettering, and the orange and blue of the app tiles. */
+   Colours come from the logo artwork: navy lettering and the app tiles' colours.
+   The logo sits on a dark "aurora" band; the page below is near-white. */
 :root {
-  --bg: #e0e0e5;   /* the logo picture's own backdrop */
+  --bg: #f6f7fb;
+  --night: #0e1433;   /* the band behind the logo */
   --card: #ffffff;
-  --line: #c9cfd6;
+  --line: rgba(20, 26, 58, 0.08);
   --text: #141a3a;
   --muted: #4f5672;
   /* The app tiles' colours, as drawn: cyan into blue, orange into coral. */
@@ -23,7 +24,12 @@
 
 body {
   margin: 0;
-  background: var(--bg);
+  min-height: 100vh;
+  /* A faint echo of the band's violet and coral on the light page. */
+  background:
+    radial-gradient(620px 480px at 0% 640px, rgba(125, 108, 240, 0.16), transparent 70%) no-repeat,
+    radial-gradient(620px 480px at 100% 860px, rgba(236, 106, 90, 0.16), transparent 70%) no-repeat,
+    var(--bg);
   color: var(--text);
   font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,6 +47,21 @@ a:hover { color: var(--orange-ink); }
 }
 
 .wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+
+/* The band behind the header: an aurora of the tile colours over navy, fading
+   to navy at the bottom, edged with the tile strip. */
+.band {
+  background:
+    linear-gradient(180deg, rgba(14, 20, 51, 0) 0, rgba(14, 20, 51, 0.25) 45%, rgba(14, 20, 51, 0.9) 100%),
+    linear-gradient(100deg, rgba(52, 195, 230, 0.55) 0%, rgba(47, 143, 224, 0.45) 20%, rgba(125, 108, 240, 0.45) 40%,
+      rgba(212, 87, 179, 0.42) 58%, rgba(236, 106, 90, 0.45) 76%, rgba(246, 196, 69, 0.42) 100%),
+    var(--night);
+  border-bottom: 4px solid;
+  border-image: var(--tiles) 1;
+}
+.band .top { padding-bottom: 28px; }
+.band .appy, .band .brand { color: #f3f5ff; }
+.band .tagline { color: #c3c8e4; }
 
 /* The header: the logo picture (its grey backdrop made transparent, so it sits
    straight on the page) and the name set as real text, sharp at any size. */
@@ -88,7 +109,7 @@ a:hover { color: var(--orange-ink); }
   color: var(--text);
 }
 
-.apps { display: grid; gap: 16px; margin: 28px 0 36px; }
+.apps { display: grid; gap: 16px; margin: 36px 0; }
 .app {
   position: relative;
   overflow: hidden;
@@ -101,7 +122,7 @@ a:hover { color: var(--orange-ink); }
   border-radius: var(--radius);
   color: var(--text);
   text-decoration: none;
-  box-shadow: 0 1px 3px rgba(20, 26, 58, 0.06);
+  box-shadow: 0 4px 18px rgba(20, 26, 58, 0.07);
   transition: box-shadow 0.2s, transform 0.2s;
 }
 /* Each card's edge: cool tones down the side, warming toward the bottom. */
