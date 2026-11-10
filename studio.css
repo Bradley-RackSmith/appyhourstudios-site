@@ -1,5 +1,5 @@
 /* Appy Hour Studios: the studio's home page. Each app's pages keep their own look.
-   Colours come from the logo artwork (assets/appy-hour-hero.jpg): its pale grey
+   Colours come from the logo artwork: its pale grey
    backdrop, navy lettering, and the orange and blue of the app tiles. */
 :root {
   --bg: #e0e0e5;   /* the logo picture's own backdrop */
