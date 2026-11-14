@@ -17,6 +17,7 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | `reroute/remote-settings.json` | **Read by the live ReRoute app at launch** (map services on, slow or off; busy message). A broken file affects every player: keep it valid JSON and change it only on purpose. |
 | `racksmith/` | RackSmith Fitness: home, support, privacy, press kit (`press.html`, files in `press/`) |
 | `racksmith/site.js` | `LIVE` (the version on the App Store), `APP_LIVE`, `APP_URL`; items tagged `data-v`, `data-only`, `data-until` show or hide by version |
+| `skyfill/` | Skyfill Squares: home, support, privacy, `assets/` (icon, screenshots and link preview made from the game's store frames in `~/dev/skyfill-squares/docs/store/`) |
 
 Each app's pages keep their own look, apart from one shared touch: the top navigation bar (`.top`
 in each app's `style.css`) uses the studio's aurora colours over navy with the tile strip beneath. The studio page takes its colours from the logo art
@@ -31,7 +32,7 @@ and name sit on a dark navy "aurora" band (`.band`, on the home and 404 pages) o
   `toolbox.marketingtools.apple.com/api/v2/badges/...`. Apple's rules: don't recolour or restyle
   it, at least 40px tall, one per layout area. If Apple moves the tool again, the badge needs repointing.
 - **No analytics, trackers or third-party scripts.** The privacy policies promise none.
-- **Support addresses:** `reroute.support@appyhourstudios.com`, `racksmith.support@appyhourstudios.com`.
+- **Support addresses:** `reroute.support@appyhourstudios.com`, `racksmith.support@appyhourstudios.com`, `skyfill.support@appyhourstudios.com`.
 - **When a stylesheet or script changes**, bump its `?v=` in the pages that load it (RackSmith
   uses `style.css?v=…` and `site.js?v=…`), or visitors keep the old cached copy.
 - **Privacy policies:** change the "Last updated" date whenever the wording changes.

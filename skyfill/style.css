@@ -1,0 +1,132 @@
+/* Skyfill Squares' site: the game's night sky, gold starlight and glowing tiles. */
+:root {
+  --sky: #0d0f33;
+  --sky-2: #17124a;
+  --sky-3: #221a5c;
+  --line: #3a3378;
+  --text: #f5f4ff;
+  --muted: #b9b5dd;
+  --gold: #ffd659;
+  --cyan: #33d6fa;
+  --violet: #a873ff;
+  --rose: #ff6185;
+  --radius: 18px;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--sky) 0, var(--sky-2) 60%, #2a1557 100%) fixed;
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+/* A light dusting of stars over the whole page. */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, rgba(255,255,255,.8), transparent 60%),
+    radial-gradient(1px 1px at 72% 9%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1.5px 1.5px at 88% 42%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1px 1px at 33% 64%, rgba(255,255,255,.6), transparent 60%),
+    radial-gradient(1.5px 1.5px at 57% 82%, rgba(255,255,255,.7), transparent 60%),
+    radial-gradient(1px 1px at 6% 90%, rgba(255,255,255,.5), transparent 60%),
+    radial-gradient(1px 1px at 47% 30%, rgba(255,255,255,.5), transparent 60%);
+}
+
+h1, h2, h3, .brand { font-family: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+a { color: var(--gold); }
+a:hover { color: #ffe79c; }
+
+img { max-width: 100%; display: block; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+/* Top bar: the Appy Hour Studios family bar (the studio's aurora over navy, edged with its tile strip). */
+.top {
+  position: sticky; top: 0; z-index: 5; backdrop-filter: blur(10px);
+  background:
+    linear-gradient(100deg, rgba(52, 195, 230, 0.30), rgba(125, 108, 240, 0.28) 40%, rgba(212, 87, 179, 0.26) 62%, rgba(236, 106, 90, 0.28) 82%, rgba(246, 196, 69, 0.26)),
+    rgba(14, 20, 51, 0.94);
+  border-bottom: 3px solid;
+  border-image: linear-gradient(90deg, #34c3e6, #2f8fe0 35%, #f28a2e 70%, #ec6a5a) 1;
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 58px; gap: 12px; }
+.brand { display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 800; white-space: nowrap; }
+.brand img { width: 32px; height: 32px; border-radius: 8px; }
+.nav { display: flex; gap: 18px; }
+.nav a { color: var(--muted); text-decoration: none; font-weight: 600; font-size: 15px; }
+.nav a:hover { color: var(--text); }
+
+/* Hero */
+.hero { padding: 64px 0 40px; text-align: center; }
+.hero .icon { width: 120px; height: 120px; border-radius: 27px; margin: 0 auto 22px; box-shadow: 0 12px 50px rgba(255, 214, 89, 0.35); }
+.hero h1 { font-size: clamp(40px, 7vw, 66px); line-height: 1.05; margin: 0 0 10px; font-weight: 900; letter-spacing: -1px; }
+.hero h1 em { font-style: normal; color: var(--gold); text-shadow: 0 0 24px rgba(255, 214, 89, 0.55); }
+.hero p.lede { font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); max-width: 640px; margin: 0 auto 28px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.soon {
+  display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08); border: 1px solid var(--line); color: var(--text); font-weight: 800;
+}
+/* Apple's official App Store badge, unmodified (Apple's rules: at least 40px tall, no restyling). */
+.store-badge { display: inline-block; line-height: 0; border-radius: 10px; }
+.store-badge img { height: 56px; width: auto; }
+.small { font-size: 14px; color: var(--muted); }
+
+/* Screenshots: a row to swipe along. */
+.shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 12px 16px 32px; scrollbar-width: thin; }
+.shots img { flex: 0 0 auto; width: min(250px, 62vw); height: auto; aspect-ratio: 1320 / 2868; border-radius: 22px; scroll-snap-align: center; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.45); }
+@media (min-width: 1100px) { .shots { justify-content: center; } }
+
+/* Sections */
+section { padding: 56px 0; }
+section.alt { background: rgba(255, 255, 255, 0.04); border-top: 1px solid rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.06); }
+h2 { font-size: clamp(28px, 4vw, 38px); margin: 0 0 8px; font-weight: 850; letter-spacing: -0.5px; }
+h2 + p { color: var(--muted); margin-top: 0; max-width: 680px; }
+h3 { margin: 0 0 6px; font-size: 19px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 26px; }
+.card { background: rgba(34, 26, 92, 0.75); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+.card p { margin: 0; color: var(--muted); font-size: 15.5px; }
+.card .kicker { font-size: 13px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase; margin-bottom: 8px; color: var(--gold); }
+.card:nth-child(4n+2) .kicker { color: var(--cyan); }
+.card:nth-child(4n+3) .kicker { color: var(--rose); }
+.card:nth-child(4n) .kicker { color: var(--violet); }
+
+/* The six constellations */
+.stars { list-style: none; padding: 0; margin: 26px 0 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px 22px; }
+.stars li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+.stars strong { color: var(--gold); display: block; }
+.stars span { color: var(--muted); font-size: 15px; }
+
+/* FAQ */
+details { background: rgba(34, 26, 92, 0.75); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; margin: 10px 0; }
+summary { cursor: pointer; font-weight: 700; }
+details p, details ul { color: var(--muted); margin: 10px 0 0; }
+
+/* Plain pages (support, privacy) */
+.page { padding: 48px 16px 64px; max-width: 760px; }
+.page h1 { font-size: clamp(32px, 5vw, 44px); margin: 0 0 6px; letter-spacing: -0.5px; }
+.page h2 { font-size: 24px; margin-top: 36px; }
+.page p, .page li { color: #dcd9f5; }
+.page .note { color: var(--muted); font-style: italic; }
+.page a { overflow-wrap: anywhere; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 14px 26px; justify-content: space-between; }
+footer nav { display: flex; gap: 18px; flex-wrap: wrap; }
+footer a { color: var(--muted); }
+
+@media (max-width: 560px) {
+  .nav { gap: 12px; }
+  .nav a.hide-sm { display: none; }
+  section { padding: 44px 0; }
+  .hero { padding-top: 44px; }
+}
