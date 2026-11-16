@@ -241,3 +241,10 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 18px; }
   .cta { padding: 48px 18px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* The way back to the studio, shared by every app's top bar: the Appy Hour Studios
+   hourglass mark, then the app's own name. */
+.crumbs { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.studio { display: flex; align-items: center; flex: none; padding-right: 12px; border-right: 1px solid rgba(255, 255, 255, 0.24); }
+.studio img { display: block; width: 32px; height: 32px; object-fit: contain; padding: 2px 4px; border-radius: 8px; background: linear-gradient(160deg, #f6f7ff, #d9deef); }
+.studio:hover img { transform: translateY(-1px); }

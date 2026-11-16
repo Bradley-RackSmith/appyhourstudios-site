@@ -109,7 +109,12 @@ a:hover { color: var(--orange-ink); }
   color: var(--text);
 }
 
-.apps { display: grid; gap: 16px; margin: 36px 0; }
+/* The apps, grouped by kind (Games, Fitness), each card with its App Store status. */
+.group { margin: 36px 0 0; }
+.group + .group { margin-top: 32px; }
+.group-title { font-size: 19px; margin: 0 0 12px; }
+.group-title::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 4px; border-radius: 2px; background: var(--tiles); }
+.apps { display: grid; gap: 16px; }
 .app {
   position: relative;
   overflow: hidden;
@@ -148,11 +153,16 @@ a:hover { color: var(--orange-ink); }
   background: linear-gradient(135deg, var(--cyan), var(--blue), var(--orange), var(--coral));
   color: #fff;
 }
-.app h2 { margin: 0 0 4px; font-size: 21px; }
+.app-head { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0 0 4px; }
+.app h3 { margin: 0; font-size: 21px; }
+.status { padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 0.02em; white-space: nowrap; }
+.status.live { color: var(--blue-ink); background: rgba(47, 143, 224, 0.12); }
+.status.soon { color: var(--orange-ink); background: rgba(242, 138, 46, 0.13); }
 .app p { margin: 0 0 6px; color: var(--muted); }
 .more { color: var(--orange-ink); font-weight: 600; font-size: 15px; }
 .app:hover .more { color: var(--blue-ink); }
 
+.contact { margin-top: 36px; }
 .contact h2 { font-size: 19px; margin: 0 0 10px; }
 .contact h2::after { content: ""; display: block; width: 56px; height: 4px; margin-top: 4px; border-radius: 2px; background: var(--tiles); }
 .contact ul { margin: 0; padding-left: 20px; color: var(--muted); }

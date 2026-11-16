@@ -22,8 +22,24 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | `ricoshot/` | Ricoshot: Slime Siege: home, support, privacy, `assets/` (icon from `~/dev/ricoshot`, screenshots captured from the simulator, link preview drawn to match) |
 | `honeyspell/` | Honeyspell: Word Hive Puzzle: home, support, privacy, `assets/` (icon, screenshots from the raw simulator shots in `~/dev/honeyspell/build/raw`, link preview cut from `docs/store/header-and-search/`) |
 
-Each app's pages keep their own look, apart from one shared touch: the top navigation bar (`.top`
-in each app's `style.css`) uses the studio's aurora colours over navy with the tile strip beneath. The studio page takes its colours from the logo art
+Each app's pages keep their own look, inside one shared frame:
+
+- **Top bar** (`.top` in each app's `style.css`): the studio's aurora colours over navy with the tile
+  strip beneath. It opens with `.crumbs`: the studio's hourglass mark on a light tile
+  (`../assets/appy-hour-mark-72.webp`, linking to the studio home), a divider, then the app's icon and
+  name (linking to the app's home). The top nav is the **same on every page of an app**: the home
+  page's sections (as `./#…` on other pages) and **Support**, with `aria-current="page"` on the page you're on.
+- **Footer:** `© 2026 Appy Hour Studios, LLC` (linking to the studio home), then **Home · Support ·
+  Privacy** (· **Press** where there's a press kit).
+- **Titles:** `<App name>` on the home page, then `Support · <App>`, `Privacy Policy · <App>`, `Press kit · <App>`.
+- **Support pages** open with the support address and what to include (iPhone model, and what
+  happened). **Privacy pages** show `Last updated: <date>.` under the heading.
+- **Studio home:** apps are grouped under **Games** and **Fitness**, each card with a status tag
+  (`.status.live` "On the App Store" or `.status.soon` "Coming soon"; switch it on release day). The
+  Contact list follows the same order as the cards.
+- A new app copies this frame: the `.crumbs` CSS block at the end of any app's `style.css`, the header, the footer.
+
+The studio page takes its colours from the logo art
 (tokens at the top of `studio.css`: the tiles' cyan, blue, orange and coral, navy text). The logo
 and name sit on a dark navy "aurora" band (`.band`, on the home and 404 pages) over a near-white page.
 
