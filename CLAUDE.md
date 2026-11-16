@@ -13,6 +13,7 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | --- | --- |
 | `index.html`, `studio.css`, `assets/` | The studio home page and its logo, icons and link-preview image |
 | `favicon.ico`, `site.webmanifest`, `404.html`, `CNAME`, `.nojekyll` | Site-wide files (`CNAME` holds the domain: don't change it) |
+| `app-ads.txt` | AdMob's authorised-seller line for the games (publisher pub-6074507773310432). Google crawls it from the developer website in each App Store listing: keep it at the site root, unchanged unless AdMob says so. |
 | `reroute/` | ReRoute Racing: home, support, privacy, press kit, `assets/` |
 | `reroute/remote-settings.json` | **Read by the live ReRoute app at launch** (map services on, slow or off; busy message). A broken file affects every player: keep it valid JSON and change it only on purpose. |
 | `racksmith/` | RackSmith Fitness: home, support, privacy, press kit (`press.html`, files in `press/`) |
