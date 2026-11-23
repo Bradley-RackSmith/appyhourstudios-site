@@ -21,6 +21,7 @@ anything private here: personal email addresses, keys, tokens, unreleased plans.
 | `skyfill/` | Skyfill Squares: home, support, privacy, `assets/` (icon, screenshots and link preview made from the game's store frames in `~/dev/skyfill-squares/docs/store/`) |
 | `ricoshot/` | Ricoshot: Slime Siege: home, support, privacy, `assets/` (icon from `~/dev/ricoshot`, screenshots captured from the simulator, link preview drawn to match) |
 | `honeyspell/` | Honeyspell: Word Hive Puzzle: home, support, privacy, `assets/` (icon, screenshots from the raw simulator shots in `~/dev/honeyspell/build/raw`, link preview cut from `docs/store/header-and-search/`) |
+| `beeplings/` | Beeplings: Robot Learning (kids' learning game, ages 2-6): home, support, privacy, `assets/` (icon and favicon from `~/dev/beeplings`; screenshots and link preview still to come). Its privacy policy is the Kids-category one: no data collected, no ads. |
 
 Each app's pages keep their own look, inside one shared frame:
 
@@ -51,7 +52,7 @@ and name sit on a dark navy "aurora" band (`.band`, on the home and 404 pages) o
   `toolbox.marketingtools.apple.com/api/v2/badges/...`. Apple's rules: don't recolour or restyle
   it, at least 40px tall, one per layout area. If Apple moves the tool again, the badge needs repointing.
 - **No analytics, trackers or third-party scripts.** The privacy policies promise none.
-- **Support addresses:** `reroute.support@appyhourstudios.com`, `racksmith.support@appyhourstudios.com`, `skyfill.support@appyhourstudios.com`, `ricoshot.support@appyhourstudios.com`, `honeyspell.support@appyhourstudios.com`.
+- **Support addresses:** `reroute.support@appyhourstudios.com`, `racksmith.support@appyhourstudios.com`, `skyfill.support@appyhourstudios.com`, `ricoshot.support@appyhourstudios.com`, `honeyspell.support@appyhourstudios.com`, `beeplings.support@appyhourstudios.com`.
 - **When a stylesheet or script changes**, bump its `?v=` in the pages that load it (RackSmith
   uses `style.css?v=…` and `site.js?v=…`), or visitors keep the old cached copy.
 - **Privacy policies:** change the "Last updated" date whenever the wording changes.
